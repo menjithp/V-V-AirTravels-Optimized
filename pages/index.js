@@ -25,7 +25,8 @@ export default function Home() {
           overseas careers like we do. " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/airtravels.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Header />
       <main>
