@@ -1,0 +1,83 @@
+:root{
+    --violet-color:#401b9c;
+  --blue-color:rgba(183, 216, 236, 0.4);
+    --grey-background:#f6f6f6;
+}
+.company-bg{
+    background-image: radial-gradient(54.97% 272.54% at 27.36% -134.72%,rgba(108,148,255,.92) 0,rgba(0,0,0,.92) 100%);
+    color: white !important;
+}
+.grey-bg{
+    background: var(--grey-background);
+}
+.violet-color{
+    color:var(--violet-color)
+}
+.blue-color{
+    color:var(--blue-color)
+}
+.violet-bg{
+    background-color: var(--violet-color);
+}
+.blue-bg{
+    background-color: var(--blue-color);
+}
+.zindex-100{
+    z-index: 100;
+}
+.zindex-200{
+    z-index: 200;
+}
+.letter-spacing-1{
+    letter-spacing: 1px;
+}
+.letter-spacing-2{
+    letter-spacing: 2px;
+}
+.letter-spacing-desc{
+    letter-spacing: 0.6px;
+}
+
+.facebook{
+    color: #1877F2;
+    }
+.instagram{
+color: #d62976;
+}
+.whatsapp-link{
+color: #075e54;
+}
+.Linkedin{
+color: #0072b1;
+}
+
+.carousel-control-prev{
+    justify-content: flex-start !important;
+}
+.carousel-control-next{
+    justify-content: flex-end !important;
+}
+.carousel-indicators button{
+    height:7px !important;
+    width:7px !important;
+    border-radius: 50%;
+}
+.carousel-caption{
+    background: linear-gradient(to bottom,rgb(255,255,255,0),rgb(255,255,255,1));
+    left:0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+.subheadings{
+    margin:15px 0px;
+}
+
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 0 !important;
+}
+a{
+    text-decoration: none !important;
+}
