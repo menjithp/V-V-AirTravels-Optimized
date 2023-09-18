@@ -27,6 +27,7 @@ export default function Home() {
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/airtravels.png" />
         <link rel="manifest" href="/manifest.json" />
+            <meta name="google-site-verification" content="UVp6LuySmfW0RCaIY_5j66CEhv1JtuzQDgPGP8bvlBw" />
       </Head>
       <Header />
       <main>
