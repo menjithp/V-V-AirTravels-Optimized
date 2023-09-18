@@ -10,8 +10,8 @@ export default ()=>{
 
 return (
   <section className="address">
-    <h4 className="violet-color">{newstate.AgentName}</h4>
-    <h6 className="violet-color">{newstate.CompanyName}</h6>
+    <h2 className="violet-color fs-5">{newstate.AgentName}</h2>
+    <h2 className="violet-color fs-5">{newstate.Name}</h2>
     <address>
     {newstate.Address}
     </address>

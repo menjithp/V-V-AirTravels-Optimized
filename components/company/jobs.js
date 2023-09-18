@@ -16,7 +16,7 @@ export default ()=>{
 
 
 return <section className="w-100">
-  <h4 className="subheadings text-center fw-bold violet-color">Occupations In Demand</h4>
+  <h3 className="subheadings text-center fw-bold violet-color">Occupations In Demand</h3>
     
 <div id="carouselExampleDark" className="carousel observe-card-container carousel-dark slide" data-bs-ride="carousel">
  
@@ -31,7 +31,7 @@ className={`carousel-item pb-5 ${index===0 ?"active":""}`} data-bs-interval={300
         <div className="position-relative overflow-hidden" style={{width:"75%",margin:"auto",height:"300px"}}  >
                 <Image  src={`/media/jobs/${item.image}`} alt={item.Name} layout="fill" />
                 <div className="carousel-caption pb-0 w-100 d-md-block">
-                        <h5 className="violet-color mb-0 fw-bold letter-spacing-1">{item.Name}</h5>
+                        <h4 className="violet-color mb-0 fw-bold letter-spacing-1">{item.Name}</h4>
                 </div>
         </div>
     </div>

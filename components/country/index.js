@@ -15,7 +15,7 @@ export default ()=>{
 
     
     return <section className="p-3">
-       <h4 className="text-center subheadings violet-color">Most Popular Countries</h4>
+       <h3 className="text-center subheadings violet-color fw-bold">Popular Overseas Countries</h3>
     <ul className={style["w-layout-grid"]}>
        { country.length && country.map((item,index)=> <li key={index} className={style["one-country"]}>
 
@@ -30,7 +30,7 @@ export default ()=>{
             <div className="d-flex align-items-center gap-3">
                <div className={style["purple-sep-small"]}></div>
                <div key={index2} className="div-block-38">
-                  <p className="mb-0 comments-country">{item2}</p>
+                  <p className="mb-0 comments-country"><strong className="fw-normal">{item2}</strong></p>
                </div>
             </div>
    </div>)}
