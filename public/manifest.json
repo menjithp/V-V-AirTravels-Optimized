@@ -1,13 +1,12 @@
 {
   "short_name": "V V Air Travels",
-  "name": "V V Air Travels| Foreign Job Consultancy",
-  "description":"Foreign Overseas Job Consultancy agency",
+  "name": "V V Air Travels | Foreign Job Consultancy",
+  "description":"V V Air Travels is  Foreign Job Consultancy and immingration agent located at kadalur in Tamilnadu",
   "icons": [
     {
       "src": "aitravels.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose":"any maskable"
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
