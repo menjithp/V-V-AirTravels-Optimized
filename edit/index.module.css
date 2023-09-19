@@ -1,0 +1,38 @@
+.edit input,.edit textarea,.edit select{
+    width:100%;
+    border:none;
+    padding:0.5rem;
+    letter-spacing: 0.5px;
+    background: transparent;
+}
+.edit img{
+    background: transparent;
+}
+.edit input[type="file"]{
+    background: transparent;
+}
+.edit input:focus-visible,.edit textarea:focus-visible,.edit select:focus-visible{
+
+   outline-color: var(--violet-color);
+}
+.edit label{
+    letter-spacing: 0.6px;
+    padding-left:0;
+    color:var(--violet-color);
+    font-weight: 700;
+    padding:0.5rem;
+    display: block;
+    width: 100%;
+}
+.edit-modal{
+    overflow-y:auto;
+}
+.edit-modal input,.edit-modal textarea,.edit-modal select{
+    border:1px solid  var(--violet-color) !important;
+}
+.edit-modal span{
+    position: sticky;
+   bottom:0px;
+    background: white;
+
+}

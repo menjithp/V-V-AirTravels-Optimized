@@ -6,12 +6,19 @@ import Snapshot from '../components/snapshot'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
 
-import newstate from '../data/general.json'
+import Country_data from '../data/country.json'
+import General_data from '../data/general.json'
+import Jobs_data from '../data/jobs.json'
+import Snapshot_data from '../data/snapshot.json'
 
 import Image from 'next/legacy/image'
+import { getData } from './edit'
 
-export default function Home() {
+export default function Home(props) {
 
+
+
+  console.log("dora",props)
 
 
   return (
@@ -26,20 +33,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/airtravels.png" />
+        <meta name="google-site-verification" content="UVp6LuySmfW0RCaIY_5j66CEhv1JtuzQDgPGP8bvlBw" />
         <link rel="manifest" href="/manifest.json" />
-            <meta name="google-site-verification" content="UVp6LuySmfW0RCaIY_5j66CEhv1JtuzQDgPGP8bvlBw" />
       </Head>
-      <Header />
+      <Header  state={props.general}/>
       <main>
-       <Company/>
-       <Country />
-       <Snapshot/>
-       <Contact/>
+       <Company state={props}/>
+       <Country state={props.country}/>
+       <Snapshot  state={props.snapshot}/>
+       <Contact  state={props.general}/>
       </main>
-      <a href={`https://wa.me/${newstate.Whatsapp}`} className="position-fixed end-0 bottom-0 mb-4 me-4">
+      <a href={`https://wa.me/${props.general.Whatsapp}`} className="position-fixed end-0 bottom-0 mb-4 me-4">
                      <Image src="/media/general/whatsappg.webp" height={50} width={50} alt="whatsapp image"/>
         </a>
-      <Footer/>
+      <Footer state={props.general}/>
     </>
   )
+}
+
+
+export async function getServerSideProps() {
+
+
+  console.log("rangaaaaaaaaaaaaa")
+    
+  return { props:await getData() }
 }

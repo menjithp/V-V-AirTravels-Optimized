@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useEffect } from 'react';
+import {SessionProvider} from 'next-auth/react'
 
 export default function App({ Component, pageProps }) {
 
@@ -11,5 +12,11 @@ export default function App({ Component, pageProps }) {
     import ("bootstrap/dist/js/bootstrap.min.js");
   },[])
 
-  return <Component {...pageProps} />
+  return  <SessionProvider ><Component {...pageProps} /></SessionProvider>
+}
+
+
+export async function getServerSideProps() {
+    
+  return { props: { Country,General,Jobs,Snapshot } }
 }

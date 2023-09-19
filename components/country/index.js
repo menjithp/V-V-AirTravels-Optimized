@@ -1,27 +1,16 @@
-import { useEffect,useContext, useState } from 'react';
- import country from '../../data/country.json'
 import Image from 'next/legacy/image'
-//import {Context} from '../../pages/App'
 import style from './index.module.css'
-export default ()=>{
-   // const[country,setCountry]=useState([])
-
-   //const {state,dispatch}=useContext(Context)
-   //let country=state.country
-
-   // useEffect(()=>{
-   //    fetch('api/country/').then(res=>res.json()).then(res=>setCountry(res.res))
-   // },[])
+export default ({state})=>{
 
     
     return <section className="p-3">
        <h3 className="text-center subheadings violet-color fw-bold">Popular Overseas Countries</h3>
     <ul className={style["w-layout-grid"]}>
-       { country.length && country.map((item,index)=> <li key={index} className={style["one-country"]}>
+       { state.length && state.map((item,index)=> <li key={index} className={style["one-country"]}>
 
 <div className="">
    <div className="w-100 position-relative" style={{height:"200px"}}>
-       <Image src={`/media/country/${item.image}`} layout="fill" alt={item.Name}/>
+       <Image src={item.imageurl+item._id} layout="fill" alt={item.Name}/>
     </div>
    <div className="p-2">
          <h5 className="violet-color ">{item.Name}</h5>

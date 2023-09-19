@@ -1,17 +1,8 @@
 import {BsFacebook,BsInstagram,BsLinkedin,BsWhatsapp} from 'react-icons/bs'
 
-import data from '../../data/general.json'
-// import {useContext} from 'react'
-// import {Context} from '../../pages/App'
-export default ()=>{
-    // const contextobj=useContext(Context)
-    // const{state,dispatch}=contextobj
 
-    // let newstate=state.general
-
-    // console.log("state00",contextobj)
-    let state=data
-
+export default ({state})=>{
+ 
     return <section className="">
         <article>
             <h3 className="subheadings text-center fw-bold violet-color">Want to Work abroad?</h3>

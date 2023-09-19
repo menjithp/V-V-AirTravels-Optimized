@@ -11,7 +11,7 @@
     background: var(--grey-background);
 }
 .violet-color{
-    color:var(--violet-color)
+    color:var(--violet-color) !important
 }
 .blue-color{
     color:var(--blue-color)
@@ -27,6 +27,9 @@
 }
 .zindex-200{
     z-index: 200;
+}
+.zindex-300{
+    z-index: 300;
 }
 .letter-spacing-1{
     letter-spacing: 1px;
@@ -80,4 +83,11 @@ ul,li{
 }
 a{
     text-decoration: none !important;
+}
+.w-fitcontent{
+    width:fit-content
+}
+
+.box-shadow-basic{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

@@ -1,18 +1,9 @@
-"use client"
-import {useContext } from 'react'
 import {FaGreaterThan,FaLessThan} from 'react-icons/fa'
-import data from '../../data/jobs.json'
 import Image from 'next/legacy/image'
 
-//import {Context} from '../../pages/App'
 
-export default ()=>{
+export default ({state})=>{
 
-
-
-// const {state,dispatch}=useContext(Context)
-// const data=state.jobs
-  
 
 
 return <section className="w-100">
@@ -22,14 +13,14 @@ return <section className="w-100">
  
   <div className="carousel-inner position-relative">
   <div className="carousel-indicators">
-      {data.length && data.map((item,index)=><div key={index}>
+      {state.length && state.map((item,index)=><div key={index}>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={index} className={`${index===0?"active":""} bg-dark`} aria-current="true" aria-label={`Slide ${index}`}></button>
       </div>)}
   </div>
-{data.length && data.map((item,index)=><div key={index} 
+{state.length && state.map((item,index)=><div key={index} 
 className={`carousel-item pb-5 ${index===0 ?"active":""}`} data-bs-interval={3000}>
         <div className="position-relative overflow-hidden" style={{width:"75%",margin:"auto",height:"300px"}}  >
-                <Image  src={`/media/jobs/${item.image}`} alt={item.Name} layout="fill" />
+                <Image  src={item.imageurl+item._id} alt={item.Name} layout="fill" />
                 <div className="carousel-caption pb-0 w-100 d-md-block">
                         <h4 className="violet-color mb-0 fw-bold letter-spacing-1">{item.Name}</h4>
                 </div>

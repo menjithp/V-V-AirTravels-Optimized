@@ -1,26 +1,26 @@
 [{
     "Name":"Gulf",
     "Comments":["Employement Visa","Visit Visa"],
-    "image":"gulf.jpg"
+    "imageurl":"gulf.jpg"
 },
 {
     "Name":"Singapore",
     "Comments":["PCM Permit","S-Pass/ E-Pass","TEP Pass"],
-    "image":"singapore.jpg"
+    "imageurl":"singapore.jpg"
 },
 {
     "Name":"European Countries",
     "Comments":["TEP-Pass","Employement Visa"],
-    "image":"EU.jpg"
+    "imageurl":"EU.jpg"
 },
 {
     "Name":"Maldives",
     "Comments":["Employement Visa","Visit Visa"],
-    "image":"maldives.jpg"
+    "imageurl":"maldives.jpg"
 },
 {
     "Name":"Malaysia",
     "Comments":["Employement Visa","Visit Visa"],
-    "image":"malaysia.jpg"
+    "imageurl":"malaysia.jpg"
 }
 ]

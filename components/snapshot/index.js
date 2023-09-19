@@ -1,18 +1,11 @@
-import snapshot from '../../data/snapshot.json'
-import { useEffect,useState,useContext } from 'react';
-
-//import {Context} from '../../pages/App'
-
 
 import style from './index.module.css'
 
-export default () => {
+export default ({state}) => {
 
 
-// const {state,dispatch}=useContext(Context)
-//    let snapshot=state.snapshot
-   let impact=snapshot.filter(item=>item.type==="Impact")
-   let office=snapshot.filter(item=>item.type==="Office")
+   let impact=state.filter(item=>item.type==="Impact")
+   let office=state.filter(item=>item.type==="Office")
  
 
 

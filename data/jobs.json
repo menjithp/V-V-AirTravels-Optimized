@@ -1,20 +1,20 @@
 [{
     "Name":"Painter",
-    "image":"painter.jpg"
+    "imageurl":"painter.jpg"
 },
 {
     "Name":"Construction Worker",
-    "image":"construction_worker.jpg"
+    "imageurl":"construction_worker.jpg"
 },{
     "Name":"Taxi Driver",
-    "image":"taxi_driver.jpg"
+    "imageurl":"taxi_driver.jpg"
 },{
     "Name":"Bike Delivery",
-    "image":"bike_delivery.jpg"
+    "imageurl":"bike_delivery.jpg"
 },
 {
     "Name":"Industrial Worker",
-    "image":"industrial_worker.jpg"
+    "imageurl":"industrial_worker.jpg"
 }
 
 
