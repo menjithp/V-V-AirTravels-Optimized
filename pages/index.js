@@ -25,6 +25,15 @@ export default function Home(props) {
         <link rel="shortcut icon" href="/pwa/favicon.ico" type="image/x-icon" />
         <meta name="google-site-verification" content="UVp6LuySmfW0RCaIY_5j66CEhv1JtuzQDgPGP8bvlBw" />
         <link rel="manifest" href="/manifest.json" />
+             <script type="application/ld+json">
+           {`{
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "VV AirTravels",
+                "logo": "/pwa/favicon.ico" 
+              }`
+            }
+        </script>
       </Head>
       <Header  state={props.general}/>
       <main>
