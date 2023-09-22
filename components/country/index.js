@@ -10,7 +10,7 @@ export default ({state})=>{
 
 <div className="">
    <div className="w-100 position-relative" style={{height:"200px"}}>
-       <Image src={item.imageurl+item._id} layout="fill" alt={item.Name}/>
+       <Image src={item.imageurl+item._id+"&cache:"+item.updatedAt} layout="fill" alt={item.Name}/>
     </div>
    <div className="p-2">
          <h5 className="violet-color ">{item.Name}</h5>

@@ -54,17 +54,17 @@ const handledelete=async(e,item)=>{
         if(response.status===200){
             dispatch({type:"LOADER",data:false})
             dispatch({type:"JOBS_DELETE",data:item})
-            dispatch({type:"TOAST",data:{show:true,message:"Jobs deleted successfully",background:"green"}})
+            dispatch({type:"TOAST",data:{show:!state.toast.show,message:"Jobs deleted successfully",background:"green"}})
 
         }else{
             dispatch({type:"LOADER",data:false})
-            dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+            dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
    
         }
 
     }catch(e){
         dispatch({type:"LOADER",data:false})
-        dispatch({type:"TOAST",data:{show:true,message:e.message,background:"red"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:e.message,background:"red"}})
 
     }
 
@@ -83,16 +83,16 @@ const handleupload=async(e,item)=>{
     if(response.status===200){
         dispatch({type:"LOADER",data:false})
         dispatch({type:"JOBS_UPDATE",data:response.result})
-        dispatch({type:"TOAST",data:{show:true,message:"Jobs updated successfully",background:"green"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:"Jobs updated successfully",background:"green"}})
 
     }
     else{
         dispatch({type:"LOADER",data:false})
-        dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
     }
 }catch(e){
     dispatch({type:"LOADER",data:false})
-    dispatch({type:"TOAST",data:{show:true,message:e.message,background:"red"}})
+    dispatch({type:"TOAST",data:{show:!state.toast.show,message:e.message,background:"red"}})
 
 }
 }
@@ -114,16 +114,16 @@ const new_handleupload=async(e,item)=>{
     if(response.status===200){
         dispatch({type:"LOADER",data:false})
         dispatch({type:"JOBS_APPEND",data:response.result})
-        dispatch({type:"TOAST",data:{show:true,message:"Jobs Added successfully",background:"green"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:"Jobs Added successfully",background:"green"}})
 
     }
     else{
         dispatch({type:"LOADER",data:false})
-        dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
     }
 }catch(e){
     dispatch({type:"LOADER",data:false})
-    dispatch({type:"TOAST",data:{show:true,message:response.message||response.e.message,background:"red"}})
+    dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.e.message,background:"red"}})
 
 }
 }

@@ -5,8 +5,6 @@ import Snapshot from './snapshot'
 import Jobs from './jobs'
 import General from './general'
 
-
-import Header from './common/header'
 import style from './index.module.css'
 
 import {useReducer,useEffect,useMemo} from 'react'
@@ -15,7 +13,7 @@ import {useReducer,useEffect,useMemo} from 'react'
 import Loader from '../elements/loader'
 import Toast from '../elements/toast'
 
-import { useSession,signIn } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import { Router } from "next/router"
 
 

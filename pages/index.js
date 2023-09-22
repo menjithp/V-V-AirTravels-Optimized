@@ -6,33 +6,23 @@ import Snapshot from '../components/snapshot'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
 
-import Country_data from '../data/country.json'
-import General_data from '../data/general.json'
-import Jobs_data from '../data/jobs.json'
-import Snapshot_data from '../data/snapshot.json'
-
 import Image from 'next/legacy/image'
 import { getData } from './edit'
 
 export default function Home(props) {
 
-
-
-  console.log("dora",props)
-
-
   return (
     <>
       <Head>
          <title>V V AIR TRAVELS | Foreign Job Consultancy | India's Best Immigration Agency</title>
-        <meta name="description" content="V.V.Air Travels. India's Best Immigration Consultant.V.V.Air Travels is India’s Best
+        <meta name="description" content="V.V.Air Travels is India’s Best
         foreign job consultancy and overseas job agency. Established in 2020, We are Licensed foreign Recruitment Agency 
          in India . As part of our services, we provide personal one-on-one counseling to about 100+ individual inquiries every 
          month for migration and work visas.Over 50% of our customers are through word-of-mouth. No other company understands
           overseas careers like we do. " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/airtravels.png" />
+        <link rel="shortcut icon" href="/pwa/favicon.ico" type="image/x-icon" />
         <meta name="google-site-verification" content="UVp6LuySmfW0RCaIY_5j66CEhv1JtuzQDgPGP8bvlBw" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
@@ -52,10 +42,6 @@ export default function Home(props) {
 }
 
 
-export async function getServerSideProps() {
-
-
-  console.log("rangaaaaaaaaaaaaa")
-    
+export async function getServerSideProps() {    
   return { props:await getData() }
 }

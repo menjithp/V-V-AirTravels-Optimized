@@ -1,6 +1,8 @@
 import Image from 'next/legacy/image'
 import Button from '@/elements/Button'
 
+
+
 export default({data})=>{
     const {item,eventhandler,index,handledelete,handleupload}=data
    return <form  onSubmit={(e)=>{e.preventDefault();handleupload(e,item)}}>
@@ -26,10 +28,11 @@ export default({data})=>{
                     onError={(e)=>{
                     e.target.style.textIndent="-10000px"
                     }}
+                    key={index}
                     layout="fill"
                     className={`countryimage${index}`}
                     name="image" 
-                    src={!item.imageurl?"":item.imageurl.includes('blob')?item.imageurl:item.imageurl+item._id} 
+                    src={!item.imageurl?"":item.imageurl.includes('blob')?item.imageurl:item.imageurl+item._id+"&cache:"+item.updatedAt} 
                     alt={`overseas countries ${item.Name}`} />  
                 }
 

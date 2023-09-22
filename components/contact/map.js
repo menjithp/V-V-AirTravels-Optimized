@@ -9,10 +9,11 @@ export default ({state})=>{
       href={`https://www.google.com/maps/search/?api=1&query=${lat},${long}`}
       target="_blank"
       rel="noopener noreferrer"
+      className="d-block w-100"
     >
-      {/* <Image src={`/api/image/general?_id=${newstate._id}`} alt="Google Maps" /> */}
-      <div className="position-relative" style={{height:"200px",width:"400px"}}>
-      <Image src={state.imageurl+state._id} alt="Google Maps" layout="fill"/>
+      <div className="position-relative" style={{height:"200px",width:"75%",margin:"auto"}}>
+      <Image src={state.imageurl+state._id}  alt="Google Maps"  objectFit={'contain'}
+      layout="fill"/>
 
       </div>
     </a>

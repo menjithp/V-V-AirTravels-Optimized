@@ -17,18 +17,17 @@ export default ({data})=>{
 
   },[show])
 
-    return <div className="position-fixed" style={{backgroundColor:background,top:"20%",left:"75%"}}>
-      <div role="alert" id="myToast" aria-live="assertive" 
+    return  <div role="alert" id="myToast" aria-live="assertive" 
     style={{color:"white",width:"fit-content",
-    backgroundColor:"inherit",
-    padding:"0px 15px 0px 2px",
+    backgroundColor:background,
+    top:"20%",right:"25%",zIndex:1000,
+    padding:message ?"0.4rem":0,
     border:"none",
     boxShadow:"none"}} aria-atomic="true"
-     className="toast"
+     className="toast fw-bold letter-spacing-1 position-fixed"
       >
     <div className="toast-body" style={{borderRadius:"none",padding:0}}>
       {message}
     </div>
     </div>
-  </div>
 }

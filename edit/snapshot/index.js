@@ -46,17 +46,17 @@ const handledelete=async(e,item)=>{
         if(response.status===200){
             dispatch({type:"LOADER",data:false})
             dispatch({type:"SNAPSHOT_DELETE",data:item})
-            dispatch({type:"TOAST",data:{show:true,message:"Snapshot deleted successfully",background:"green"}})
+            dispatch({type:"TOAST",data:{show:!state.toast.show,message:"Snapshot deleted successfully",background:"green"}})
 
         }else{
             dispatch({type:"LOADER",data:false})
-            dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+            dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
    
         }
 
     }catch(e){
         dispatch({type:"LOADER",data:false})
-        dispatch({type:"TOAST",data:{show:true,message:e.message,background:"red"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:e.message,background:"red"}})
 
     }
 
@@ -75,16 +75,16 @@ const handleupload=async(e,item)=>{
     if(response.status===200){
         dispatch({type:"LOADER",data:false})
         dispatch({type:"SNAPSHOT_UPDATE",data:response.result})
-        dispatch({type:"TOAST",data:{show:true,message:"snapshot updated successfully",background:"green"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:"snapshot updated successfully",background:"green"}})
 
     }
     else{
         dispatch({type:"LOADER",data:false})
-        dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
     }
 }catch(e){
     dispatch({type:"LOADER",data:false})
-    dispatch({type:"TOAST",data:{show:true,message:e.message,background:"red"}})
+    dispatch({type:"TOAST",data:{show:!state.toast.show,message:e.message,background:"red"}})
 
 }
 }
@@ -106,16 +106,16 @@ const new_handleupload=async(e,item)=>{
     if(response.status===200){
         dispatch({type:"LOADER",data:false})
         dispatch({type:"SNAPSHOT_APPEND",data:response.result})
-        dispatch({type:"TOAST",data:{show:true,message:"snapshot Added successfully",background:"green"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:"snapshot Added successfully",background:"green"}})
 
     }
     else{
         dispatch({type:"LOADER",data:false})
-        dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+        dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
     }
 }catch(e){
     dispatch({type:"LOADER",data:false})
-    dispatch({type:"TOAST",data:{show:true,message:response.message||response.e.message,background:"red"}})
+    dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.e.message,background:"red"}})
 
 }
 }

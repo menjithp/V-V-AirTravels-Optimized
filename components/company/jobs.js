@@ -20,7 +20,7 @@ return <section className="w-100">
 {state.length && state.map((item,index)=><div key={index} 
 className={`carousel-item pb-5 ${index===0 ?"active":""}`} data-bs-interval={3000}>
         <div className="position-relative overflow-hidden" style={{width:"75%",margin:"auto",height:"300px"}}  >
-                <Image  src={item.imageurl+item._id} alt={item.Name} layout="fill" />
+                <Image  src={item.imageurl+item._id+"&cache:"+item.updatedAt}  alt={item.Name} layout="fill" />
                 <div className="carousel-caption pb-0 w-100 d-md-block">
                         <h4 className="violet-color mb-0 fw-bold letter-spacing-1">{item.Name}</h4>
                 </div>

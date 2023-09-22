@@ -17,7 +17,7 @@ export default({data})=>{
         <label>Uploaded Image</label>
         <div style={{height:"50px",width:"80px",position:"relative"}}>
                 {item.imageurl &&<Image  className={`jobimage${index}`} 
-                src={item.imageurl.includes('blob')?item.imageurl:item.imageurl+item._id} 
+                src={item.imageurl.includes('blob')?item.imageurl:item.imageurl+item._id+"&cache:"+item.updatedAt}  
                     onError={(e)=>{
                         e.target.style.textIndent="-10000px"
                     }}

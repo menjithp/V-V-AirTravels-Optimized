@@ -21,22 +21,22 @@ export  default ({data})=>{
         let form=new FormData()
         form.append("General",JSON.stringify(general))
         if (general.imagedata)form.append("General",general.imagedata)
-
+        dispatch({type:"LOADER",data:true})
         try{
             let response=await useput("/api/edit/general",form)
             if(response.status===200){
                 dispatch({type:"LOADER",data:false})
                 dispatch({type:"GENERAL_UPDATE",data:response.result})
-                dispatch({type:"TOAST",data:{show:true,message:"General updated successfully",background:"green"}})
+                dispatch({type:"TOAST",data:{show:!state.toast.show,message:"General updated successfully",background:"green"}})
     
             }
             else{
                 dispatch({type:"LOADER",data:false})
-                dispatch({type:"TOAST",data:{show:true,message:response.message||response.description.message,background:"red"}})
+                dispatch({type:"TOAST",data:{show:!state.toast.show,message:response.message||response.description.message,background:"red"}})
             }
         }catch(e){
             dispatch({type:"LOADER",data:false})
-            dispatch({type:"TOAST",data:{show:true,message:e.message,background:"red"}})
+            dispatch({type:"TOAST",data:{show:!state.toast.show,message:e.message,background:"red"}})
     
         }
     }
@@ -105,7 +105,7 @@ return <form className="row me-0 justify-content-center gap-2 mb-5" onSubmit={up
         <label>Uploaded Map Image: </label>
         <div className="col-md-9" style={{height:"50px",width:"80px",position:"relative"}}>
            { <Image
-           src={general.imageurl.includes('blob')?general.imageurl:general.imageurl+general._id} 
+           src={general.imageurl.includes('blob')?general.imageurl:general.imageurl+general._id+"&cache:"+general.updatedAt} 
             className={`general_image`}
              onError={(e)=>{
                 e.target.style.textIndent="-10000px"
